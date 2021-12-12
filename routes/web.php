@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,13 +23,16 @@ Route::get('/events', function () {
     return view('events');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
 
-Route::get('/signup', function () {
-    return view('signup');
-});
+Route::get('/signup', [RegisterController::class, 'index']);
+Route::post('/signup', [RegisterController::class, 'store']);
+
+Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+
+Route::post('/logout', [LoginController::class, 'logout']);
+
+Route::get('/dashboard', [DashboardController::class, 'index']);
 
 Route::get('/post', function () {
     return view('post');
@@ -35,10 +40,6 @@ Route::get('/post', function () {
 
 Route::get('/event', function () {
     return view('event');
-});
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
 });
 
 Route::get('/player', function () {
