@@ -1,5 +1,5 @@
 <!--footer-->
-<footer class="footer-dark" style="background: url(&quot;img/circle1.png&quot;) right / contain no-repeat, rgb(0,0,0);">
+<footer class="footer-dark" style="background: url(&quot;https://media.discordapp.net/attachments/650172081434263581/919604441131405352/circle1.png?width=468&height=468&quot;) right / contain no-repeat, rgb(0,0,0);">
   <div class="container">
     <div class="row">
 

@@ -23,6 +23,9 @@
     <link rel="stylesheet" href=" {{ asset('fonts/ionicons.min.css') }}">
 
     <!-- link footer-->
+    <link rel="stylesheet" href="{{ asset('css/styles-landing.css') }}">
+
+    <!-- link footer-->
     <link rel="stylesheet" href="{{ asset('css/Footer.css') }}">
 
     <!-- link navigation button-->

@@ -19,7 +19,7 @@
                             Welcome, {{ auth()->user()->username }}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="/player">My Event</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>

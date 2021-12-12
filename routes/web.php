@@ -20,9 +20,7 @@ use App\Http\Controllers\DashboardController;
 Route::get('/', [PostController::class, 'index']);
 Route::get('/posts/{slug}', [PostController::class,'show']);
 
-Route::get('/events', function () {
-    return view('events');
-});
+Route::get('/events', [PostController::class, 'player']);
 
 
 Route::get('/signup', [RegisterController::class, 'index'])->middleware('guest');
@@ -30,11 +28,8 @@ Route::post('/signup', [RegisterController::class, 'store']);
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
-
 Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('/player', [PostController::class, 'player'])->middleware('auth');
 
-Route::get('/player', function () {
-    return view('player');
-});
+Route::get('/events', [PostController::class, 'events']);

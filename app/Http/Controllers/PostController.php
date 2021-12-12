@@ -20,4 +20,17 @@ class PostController extends Controller
             "post" => Post::where('slug',$slug)->first()
         ]);
     }
+    public function player(){
+        return view('player',[
+            "title" => "Posts",
+            "posts" => Post::all()
+        ]);
+    }
+    public function events(){
+        return view('events',[
+            "title" => "Posts",
+            "posts" => Post::all()
+        ]);
+    }
+
 }
