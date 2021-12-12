@@ -8,7 +8,7 @@ use App\Models\Post;
 class PostController extends Controller
 {
     public function index(){
-        return view('events',[
+        return view('home',[
             "title" => "Posts",
             "posts" => Post::all()
         ]);
@@ -17,7 +17,7 @@ class PostController extends Controller
     {
         return view('post', [
             "title" => "Single Post",
-            "post" => Post::find($slug)
+            "post" => Post::where('slug',$slug)->first()
         ]);
     }
 }

@@ -1,11 +1,11 @@
 <!--navbar-->
 
 <nav class="navbar navbar-light navbar-expand-lg navigation-clean-button"
-    style="background: url('img/navbar.png');box-shadow: 0 1px 5px rgb(0, 0, 0, 0.2);">
+    style="background: url('{{ asset('img/navbar.png') }}');box-shadow: 0 1px 5px rgb(0, 0, 0, 0.2);">
     <!--logo vanguard-->
     <div class="container-fluid">
         <a class="navbar-brand" href="/">
-            <img class="img-fluid" src="img/logo.png" width="100">
+            <img class="img-fluid" src="{{ asset('img/logo.png') }}" width="100">
         </a>
         <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
             <span class="navbar-toggler-icon"></span>

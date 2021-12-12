@@ -6,7 +6,7 @@
       <!--logo vanguard-->
       <div class="col-sm-6 col-md-3 col-lg-2 item">
         <div style="margin-top: 1rem;"></div>
-        <img class="img-fluid" src="img/logo2.png" width="100" style="text-align: left;width: 181px;">
+        <img class="img-fluid" src="{{ asset('img/logo2.png') }}" width="100" style="text-align: left;width: 181px;">
       </div>
 
       <!--sosial media-->

@@ -24,7 +24,6 @@
             </div>
             <!-- teks link find a event-->
             <h4 class="text-white m-1"> <a href="/events" class="text-white">FIND A EVENT TO PLAY IN <i class="fa fa-play icon-panah-putih"></i></a> </h1>
-
           </div>
         </div>
       </div>
@@ -35,18 +34,19 @@
         </div>
         <div class="card ">
 
-
           <ul class="list-group ">
-            
-            <a href="#" class="list-group-item list-group-item-action">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">List group item heading</h5>
-                <small class="text-muted">3 days ago</small>
-              </div>
-              <p class="mb-1">Some placeholder content in a paragraph.</p>
-              <small class="text-muted">And some muted small print.</small>
-            </a>
-            
+
+                @foreach ($posts as $post)
+                <a href="/posts/{{ $post["slug"] }}" class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">{{ $post["title"] }}</h5>
+                        <small class="text-muted">{{ $post["created_at"] }}</small>
+                    </div>
+                    <p class="mb-1">{{ $post["category_id()->name"] }}</p>
+                    <small class="text-muted">And some muted small print.</small>
+                </a>
+                @endforeach
+
           </ul>
         </div>
       </div>
