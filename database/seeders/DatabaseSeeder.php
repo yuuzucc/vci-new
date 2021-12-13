@@ -45,7 +45,7 @@ class DatabaseSeeder extends Seeder
             'title' => 'Card Battle Multitoys Event',
             'category_id' => 1,
             'slug' => 'T222200GH',
-            'description' => '<img src="https://media.discordapp.net/attachments/650172081434263581/919604440707792896/bannerod.jpg?width=960&height=360" class="card-img-top" alt="banner"><div class="card-body"><h5 class="card-title">Card Battle Multitoys Event</h5><p class="card-text">Tournament ID T222200GH</p><h5><i class="bi bi-shop"> Organizer </i>: MultiToys</h5><h5><i class="bi bi-calendar-event"> Tournament Date </i>: 13 Jan 2022</h5><h5><i class="bi bi-clock"></i> Start Time </i>: 09:00 (GMT +7)</h5><h5><i class="bi bi-person-badge"></i> Format </i>: D-Standard/h5></div>'
+            'description' => '<img src="https://media.discordapp.net/attachments/650172081434263581/919604440707792896/bannerod.jpg?width=960&height=360" class="card-img-top" alt="banner"><div class="card-body"><h5 class="card-title">Card Battle Multitoys Event</h5><p class="card-text">Tournament ID T222200GH</p><h5><i class="bi bi-shop"> Organizer </i>: MultiToys</h5><h5><i class="bi bi-calendar-event"> Tournament Date </i>: 13 Jan 2022</h5><h5><i class="bi bi-clock"></i> Start Time </i>: 09:00 (GMT +7)</h5><h5><i class="bi bi-person-badge"></i> Format </i>: D-Standard</h5></div>'
         ]);
 
         Post::create([

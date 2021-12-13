@@ -27,7 +27,7 @@
                             <ul class="list-group">
                                 @foreach ($posts as $post)
                                     @if ($post->category->id == 1)
-                                        <a href="/posts/{{ $post['slug'] }}"
+                                        <a href="/events/{{ $post['slug'] }}"
                                             class="list-group-item list-group-item-action">
                                             <div class="d-flex w-100 justify-content-between">
                                                 <h5 class="mb-1">{{ $post['title'] }}</h5>

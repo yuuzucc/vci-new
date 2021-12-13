@@ -9,7 +9,7 @@
 
                 {!! $post->description !!}
                 <a href="#" class="btn btn-danger ms-3">Register</a>
-                <p class="card-text mt-3">
+                <p class="card-text mt-5 ms-3">
                     <small class="text-muted">{{ $post['created_at'] }}</small>
                 </p>
 
