@@ -40,8 +40,11 @@
                             <!-- teks link find a event-->
                             <h4 class="text-white m-1 mt-3"> <a href="/events" class="text-white">FIND A EVENT TO PLAY
                                     IN <i class="fa fa-play icon-panah-putih"></i></a> </h1>
+
                         </div>
+
                     </div>
+                    <h4 class="text-white m-1 mt-3"> <a href="/events" class="text-white">See all news</a> </h1>
                 </div>
 
                 <div class="col-8">
