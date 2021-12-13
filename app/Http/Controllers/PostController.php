@@ -32,5 +32,12 @@ class PostController extends Controller
             "posts" => Post::all()
         ]);
     }
+    public function showE($slug)
+    {
+        return view('event', [
+            "title" => "Single Post",
+            "post" => Post::where('slug',$slug)->first()
+        ]);
+    }
 
 }

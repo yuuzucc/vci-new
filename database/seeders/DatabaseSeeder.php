@@ -38,14 +38,14 @@ class DatabaseSeeder extends Seeder
             'category_id' => '1',
             'slug' => 'T202000GH',
             'date' => '2021-12-01',
-            'description' => '<img src="https://media.discordapp.net/attachments/650172081434263581/919587615622197258/banner2.png" class="card-img-top" alt="banner"><div class="card-body"><h5 class="card-title">Tournament Rank UP</h5><p class="card-text">Tournament ID T202000GH</p><h5><i class="bi bi-shop"> Organizer </i>: Velocity BSD</h5><h5><i class="bi bi-calendar-event"> Tournament Date </i>: 10 Jan 2022</h5><h5><i class="bi bi-clock"></i> Start Time </i>: 15:00 (GMT +7)</h5><h5><i class="bi bi-person-badge"></i> Format </i>: V-Premium</h5><a href="#" class="btn btn-danger">Register</a><p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p></div>'
+            'description' => '<img src="https://media.discordapp.net/attachments/650172081434263581/919587615622197258/banner2.png" class="card-img-top" alt="banner"><div class="card-body"><h5 class="card-title">Tournament Rank UP</h5><p class="card-text">Tournament ID T202000GH</p><h5><i class="bi bi-shop"> Organizer </i>: Velocity BSD</h5><h5><i class="bi bi-calendar-event"> Tournament Date </i>: 10 Jan 2022</h5><h5><i class="bi bi-clock"></i> Start Time </i>: 15:00 (GMT +7)</h5><h5><i class="bi bi-person-badge"></i> Format </i>: V-Premium</h5></div>'
         ]);
         Post::create([
             'date' => '2021-12-10',
             'title' => 'Card Battle Multitoys Event',
             'category_id' => 1,
             'slug' => 'T222200GH',
-            'description' => '<img src="https://media.discordapp.net/attachments/650172081434263581/919604440707792896/bannerod.jpg?width=960&height=360" class="card-img-top" alt="banner"><div class="card-body"><h5 class="card-title">Card Battle Multitoys Event</h5><p class="card-text">Tournament ID T222200GH</p><h5><i class="bi bi-shop"> Organizer </i>: MultiToys</h5><h5><i class="bi bi-calendar-event"> Tournament Date </i>: 13 Jan 2022</h5><h5><i class="bi bi-clock"></i> Start Time </i>: 09:00 (GMT +7)</h5><h5><i class="bi bi-person-badge"></i> Format </i>: D-Standard/h5><a href="#" class="btn btn-danger">Register</a><p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p></div>'
+            'description' => '<img src="https://media.discordapp.net/attachments/650172081434263581/919604440707792896/bannerod.jpg?width=960&height=360" class="card-img-top" alt="banner"><div class="card-body"><h5 class="card-title">Card Battle Multitoys Event</h5><p class="card-text">Tournament ID T222200GH</p><h5><i class="bi bi-shop"> Organizer </i>: MultiToys</h5><h5><i class="bi bi-calendar-event"> Tournament Date </i>: 13 Jan 2022</h5><h5><i class="bi bi-clock"></i> Start Time </i>: 09:00 (GMT +7)</h5><h5><i class="bi bi-person-badge"></i> Format </i>: D-Standard/h5></div>'
         ]);
 
         Post::create([
@@ -53,7 +53,7 @@ class DatabaseSeeder extends Seeder
             'title' => 'Tournament National Event by VI',
             'category_id' => 1,
             'slug' => 'T222100GH',
-            'description' => '<img src="https://media.discordapp.net/attachments/650172081434263581/919604440707792896/bannerod.jpg?width=960&height=360" class="card-img-top" alt="banner"><div class="card-body"><h5 class="card-title">Tournament National Event by VI</h5><p class="card-text">Tournament ID T222100GH</p><h5><i class="bi bi-shop"> Organizer </i>: Vanguard Indonesia</h5><h5><i class="bi bi-calendar-event"> Tournament Date </i>: 01 Feb 2022</h5><h5><i class="bi bi-clock"></i> Start Time </i>: 12:00 (GMT +7)</h5><h5><i class="bi bi-person-badge"></i> Format </i>: D-Standard</h5><a href="#" class="btn btn-danger">Register</a><p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p></div>'
+            'description' => '<img src="https://media.discordapp.net/attachments/650172081434263581/919604440707792896/bannerod.jpg?width=960&height=360" class="card-img-top" alt="banner"><div class="card-body"><h5 class="card-title">Tournament National Event by VI</h5><p class="card-text">Tournament ID T222100GH</p><h5><i class="bi bi-shop"> Organizer </i>: Vanguard Indonesia</h5><h5><i class="bi bi-calendar-event"> Tournament Date </i>: 01 Feb 2022</h5><h5><i class="bi bi-clock"></i> Start Time </i>: 12:00 (GMT +7)</h5><h5><i class="bi bi-person-badge"></i> Format </i>: D-Standard</h5></div>'
         ]);
 
         // news
