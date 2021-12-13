@@ -29,7 +29,7 @@
 
                         <div class="row row-cols-md-2 g-5">
                             @foreach ($posts as $post)
-                                @if ($post->category->id == 2)
+
                                     <div class="col">
                                         <div class="card shadow-sm h-100">
                                             <img class="bd-placeholder-img card-img-top" width="100%" height="225"
@@ -48,7 +48,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                @endif
+
                             @endforeach
                         </div>
                     </div>

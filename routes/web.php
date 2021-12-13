@@ -20,10 +20,8 @@ use App\Http\Controllers\DashboardController;
 Route::get('/', [PostController::class, 'index']);
 Route::get('/news', [PostController::class, 'posts']);
 Route::get('/news/{slug}', [PostController::class,'show']);
-Route::get('/news/{slug}', [PostController::class, 'showE']);
 
 Route::get('/events', [PostController::class, 'player']);
-
 
 Route::get('/signup', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/signup', [RegisterController::class, 'store']);

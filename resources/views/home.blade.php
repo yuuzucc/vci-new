@@ -25,8 +25,8 @@
                                     style="background-color: red;">search</button>
                             </form>
                             <ul class="list-group">
-                                @foreach ($posts as $post)
-                                    @if ($post->category->id == 1)
+                                @foreach ($events as $post)
+
                                         <a href="/events/{{ $post['slug'] }}"
                                             class="list-group-item list-group-item-action">
                                             <div class="d-flex w-100 justify-content-between">
@@ -34,7 +34,7 @@
                                             </div>
 
                                         </a>
-                                    @endif
+
                                 @endforeach
                             </ul>
                             <!-- teks link find a event-->
@@ -44,7 +44,7 @@
                         </div>
 
                     </div>
-                    <h4 class="text-white m-1 mt-3"> <a href="/events" class="text-white">See all news</a> </h1>
+                    <h4 class="text-white m-1 mt-3"> <a href="/news" class="text-white">See all news</a> </h1>
                 </div>
 
                 <div class="col-8">
@@ -54,7 +54,7 @@
 
                         <ul class="list-group ">
                             @foreach ($posts as $post)
-                                @if ($post->category->id == 2)
+
                                 <li class="list-date-event-100 list-date-news-top">
                                     <div class="row">
                                       <div class="fw-bold col-md-6 padding-list-group"><span><br>{{ $post['title'] }}</div>
@@ -63,7 +63,7 @@
                                       <div class="col-md-6 text-end padding-list-group"><a href="/news/{{ $post['slug'] }}"><i class="fa fa-play icon-panah-merah"></i></a></div>
                                     </div>
                                   </li>
-                                @endif
+
                             @endforeach
 
                         </ul>

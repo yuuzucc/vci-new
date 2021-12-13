@@ -2,56 +2,65 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
 use Illuminate\Http\Request;
 use App\Models\Post;
 
 class PostController extends Controller
 {
-    public function index(){
-        return view('home',[
-            "title" => "Posts",
-            "posts" => Post::latest()->get()
+    public function index()
+    {
+        return view('home', [
+            "title" => "VCI",
+            "posts" => Post::latest()->get(),
+            "events" => Event::latest()->paginate(4)
         ]);
     }
 
+    public function posts()
+    {
+        return view('news', [
+            "title" => "News List",
+            "posts" => Post::latest()->paginate(4)
+        ]);
+    }
 
     public function show($slug)
     {
         return view('post', [
-            "title" => "Single Post",
-            "post" => Post::where('slug',$slug)->first()
+            "title" => "Post details",
+            "post" => Post::where('slug', $slug)->first()
         ]);
     }
 
-    public function player(){
-        return view('player',[
+    public function player()
+    {
+        return view('player', [
+            "title" => "Players Event Log",
             "posts" => Post::latest()->get()
         ]);
     }
 
-    public function events(){
-        $search = Post::latest();
-        if(request('search')){
-            $search->where('title','like','%' . request('search') . '%');
+    public function events()
+    {
+        $search = Event::latest();
+        if (request('search')) {
+            $search->where('title', 'like', '%' . request('search') . '%')
+                    ->orWhere('format', 'like', '%' . request('search') . '%');
         }
-        return view('events',[
+        return view('events', [
             "title" => "Events",
-            "posts" => $search->get()
+            "events" => $search->paginate(8)
         ]);
     }
 
     public function showE($slug)
     {
         return view('event', [
-            "title" => "Single Post",
-            "post" => Post::where('slug',$slug)->first()
+            "title" => "Event details",
+            "post" => Event::where('slug', $slug)->first()
         ]);
     }
 
-    public function posts(){
-        return view('news',[
-            "title" => "All News",
-            "posts" => Post::latest()->get()
-        ]);
-    }
+
 }

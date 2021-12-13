@@ -21,7 +21,7 @@
             </div>
         </div>
 
-        <div class="col-11 mx-auto mb-4 card border-3">
+        <div class="col-11 mx-auto mb-4 card border-3 text-align">
 
             <table class="table">
                 <thead>
@@ -29,21 +29,21 @@
                         <th scope="col">No</th>
                         <th scope="col">Event Name</th>
                         <th scope="col">Date</th>
+                        <th scope="col">Format</th>
 
                     </tr>
                 </thead>
                 <tbody>
 
-                    @foreach ($posts as $post)
-                        @if ($post->category->id == 1)
-                            <tr>
+                    @foreach ($events as $post)
 
-                                <th scope="row">{{ $loop->index }}</th>
+                            <tr>
+                                <th scope="row">{{ $loop->iteration}}</th>
                                 <td><a href="/events/{{ $post['slug'] }}">{{ $post['title'] }}</a> </td>
                                 <td>{{ $post['date'] }}</td>
-
+                                <td>{{ $post->format }}</td>
                             </tr>
-                        @endif
+
                     @endforeach
 
                 </tbody>
