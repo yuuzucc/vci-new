@@ -15,7 +15,7 @@
                 <form class="input-group" action="/events" >
                     <h4 class="ms-3"> <span class="align-middle">Search</span> </h4>
                     <input type="search" class="form-control rounded ms-3 me-3" placeholder="insert event name, date, time, or format" name="search" aria-label="Search"
-                        aria-describedby="search-addon" />
+                        aria-describedby="search-addon" value="{{ request('search') }}"/>
                     <button type="submit" class="btn text-white rounded me-3" style="background-color: red;">Search</button>
                 </form>
             </div>

@@ -12,16 +12,20 @@ class PostController extends Controller
     {
         return view('home', [
             "title" => "VCI",
-            "posts" => Post::latest()->get(),
+            "posts" => Post::latest()->paginate(3),
             "events" => Event::latest()->paginate(4)
         ]);
     }
 
     public function posts()
     {
+        $post = Post::latest();
+        if (request('search')) {
+            $post->where('title', 'like', '%' . request('search') . '%');
+        }
         return view('news', [
             "title" => "News List",
-            "posts" => Post::latest()->paginate(4)
+            "posts" => $post->paginate(4)->withQueryString()
         ]);
     }
 
@@ -46,13 +50,13 @@ class PostController extends Controller
         $search = Event::latest();
         if (request('search')) {
             $search->where('title', 'like', '%' . request('search') . '%')
-                    ->orWhere('format', 'like', '%' . request('search') . '%')
-                    ->orWhere('date', 'like', '%' . request('search') . '%')
-                    ->orWhere('time', 'like', '%' . request('search') . '%');
+                ->orWhere('format', 'like', '%' . request('search') . '%')
+                ->orWhere('date', 'like', '%' . request('search') . '%')
+                ->orWhere('time', 'like', '%' . request('search') . '%');
         }
         return view('events', [
             "title" => "Events",
-            "events" => $search->paginate(8)
+            "events" => $search->paginate(8)->withQueryString()
         ]);
     }
 
@@ -63,6 +67,4 @@ class PostController extends Controller
             "post" => Event::where('slug', $slug)->first()
         ]);
     }
-
-
 }

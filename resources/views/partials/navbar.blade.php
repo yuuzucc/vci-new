@@ -14,10 +14,10 @@
             <ul class="navbar-nav ms-auto">
                 @auth
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
+                        <h5 class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Welcome, {{ auth()->user()->username }}
-                        </a>
+                        </h5>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="/player">My Event</a></li>
                             <li><a class="dropdown-item" href="/events">Events</a></li>
