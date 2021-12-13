@@ -10,9 +10,10 @@ class PostController extends Controller
     public function index(){
         return view('home',[
             "title" => "Posts",
-            "posts" => Post::all()
+            "posts" => Post::latest()->get()
         ]);
     }
+
     public function show($slug)
     {
         return view('post', [
@@ -20,18 +21,24 @@ class PostController extends Controller
             "post" => Post::where('slug',$slug)->first()
         ]);
     }
+
     public function player(){
         return view('player',[
-            "title" => "Posts",
-            "posts" => Post::all()
+            "posts" => Post::latest()->get()
         ]);
     }
+
     public function events(){
+        $search = Post::latest();
+        if(request('search')){
+            $search->where('title','like','%' . request('search') . '%');
+        }
         return view('events',[
-            "title" => "Posts",
-            "posts" => Post::all()
+            "title" => "Events",
+            "posts" => $search->get()
         ]);
     }
+
     public function showE($slug)
     {
         return view('event', [
@@ -40,4 +47,10 @@ class PostController extends Controller
         ]);
     }
 
+    public function posts(){
+        return view('news',[
+            "title" => "All News",
+            "posts" => Post::latest()->get()
+        ]);
+    }
 }

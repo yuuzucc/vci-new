@@ -17,7 +17,7 @@
                     <div class="card border-3 text-white" style=" background-color: black; border-color:red;">
                         <div class="card-body">
                             <!-- search-->
-                            <h3>Search for post</h3>
+                            <h3>Search for event</h3>
                             <div class="input-group mb-3">
                                 <input type="search" class="form-control rounded me-3" placeholder="Search"
                                     aria-label="Search" aria-describedby="search-addon" />
@@ -57,7 +57,7 @@
                                       <div class="fw-bold col-md-6 padding-list-group"><span><br>{{ $post['title'] }}</div>
 
                                       <!--icon panah merah-->
-                                      <div class="col-md-6 text-end padding-list-group"><a href="/posts/{{ $post['slug'] }}"><i class="fa fa-play icon-panah-merah"></i></a></div>
+                                      <div class="col-md-6 text-end padding-list-group"><a href="/news/{{ $post['slug'] }}"><i class="fa fa-play icon-panah-merah"></i></a></div>
                                     </div>
                                   </li>
                                 @endif

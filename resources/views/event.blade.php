@@ -6,15 +6,16 @@
         <div class="card mb-3">
             <div class="card-body">
                 <h1 class="card-title text-center m-4">{{ $post->title }}</h1>
-
-                {!! $post->description !!}
-                <a href="#" class="btn btn-danger ms-3">Register</a>
-                <p class="card-text mt-5 ms-3">
-                    <small class="text-muted">{{ $post['created_at'] }}</small>
-                </p>
-
+                <div class="card-body">
+                    <img src="{{ $post->bannerlink }}" class="card-img-top mb-3" alt="banner">
+                    {!! $post->description !!}
+                    <a href="#" class="btn btn-danger mt-2">Register</a>
+                    <p class="card-text mt-5">
+                        <small class="text-muted">{{ $post['created_at'] }}</small>
+                    </p>
+                </div>
             </div>
         </div>
-        <a href="/" class="card-link">Back to home</a>
+        <a href="/" class="card-link">Back to homea></ <a href="/events" class="card-link">Back to events</a>
     </div>
 @endsection

@@ -18,7 +18,8 @@ use App\Http\Controllers\DashboardController;
 */
 
 Route::get('/', [PostController::class, 'index']);
-Route::get('/posts/{slug}', [PostController::class,'show']);
+Route::get('/news', [PostController::class, 'posts']);
+Route::get('/news/{slug}', [PostController::class,'show']);
 
 Route::get('/events', [PostController::class, 'player']);
 

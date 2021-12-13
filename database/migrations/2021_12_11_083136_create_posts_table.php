@@ -17,8 +17,10 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->foreignId('category_id');
             $table->string('title');
+            $table->string('bannerlink');
             $table->date('date');
-            $table->string('slug');
+            $table->string('slug')->unique();
+            $table->string('excerpt')->nullable();
             $table->longText('description');
             $table->timestamp('published_at')->nullable();
             $table->timestamps();
