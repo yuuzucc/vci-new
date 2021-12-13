@@ -46,7 +46,9 @@ class PostController extends Controller
         $search = Event::latest();
         if (request('search')) {
             $search->where('title', 'like', '%' . request('search') . '%')
-                    ->orWhere('format', 'like', '%' . request('search') . '%');
+                    ->orWhere('format', 'like', '%' . request('search') . '%')
+                    ->orWhere('date', 'like', '%' . request('search') . '%')
+                    ->orWhere('time', 'like', '%' . request('search') . '%');
         }
         return view('events', [
             "title" => "Events",

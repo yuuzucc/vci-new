@@ -14,9 +14,9 @@
                 <!-- search-->
                 <form class="input-group" action="/events" >
                     <h4 class="ms-3"> <span class="align-middle">Search</span> </h4>
-                    <input type="search" class="form-control rounded ms-3 me-3" placeholder="Search" name="search" aria-label="Search"
+                    <input type="search" class="form-control rounded ms-3 me-3" placeholder="insert event name, date, time, or format" name="search" aria-label="Search"
                         aria-describedby="search-addon" />
-                    <button type="submit" class="btn text-white rounded me-3" style="background-color: red;">search</button>
+                    <button type="submit" class="btn text-white rounded me-3" style="background-color: red;">Search</button>
                 </form>
             </div>
         </div>
@@ -29,6 +29,7 @@
                         <th scope="col">No</th>
                         <th scope="col">Event Name</th>
                         <th scope="col">Date</th>
+                        <th scope="col">Time</th>
                         <th scope="col">Format</th>
 
                     </tr>
@@ -41,6 +42,7 @@
                                 <th scope="row">{{ $loop->iteration}}</th>
                                 <td><a href="/events/{{ $post['slug'] }}">{{ $post['title'] }}</a> </td>
                                 <td>{{ $post['date'] }}</td>
+                                <td>{{ $post['time'] }}</td>
                                 <td>{{ $post->format }}</td>
                             </tr>
 
