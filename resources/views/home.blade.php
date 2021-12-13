@@ -27,13 +27,12 @@
                             <ul class="list-group">
                                 @foreach ($events as $post)
 
-                                        <a href="/events/{{ $post['slug'] }}"
-                                            class="list-group-item list-group-item-action">
-                                            <div class="d-flex w-100 justify-content-between">
-                                                <h5 class="mb-1">{{ $post['title'] }}</h5>
-                                            </div>
+                                    <a href="/events/{{ $post['slug'] }}" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">{{ $post['title'] }}</h5>
+                                        </div>
 
-                                        </a>
+                                    </a>
 
                                 @endforeach
                             </ul>
@@ -44,7 +43,7 @@
                         </div>
 
                     </div>
-                    <h4 class="text-white m-1 mt-3"> <a href="/news" class="text-white">See all news</a> </h1>
+
                 </div>
 
                 <div class="col-8">
@@ -52,21 +51,26 @@
                         <h3 class="card-title">Lastest News</h1>
                     </div>
 
-                        <ul class="list-group ">
-                            @foreach ($posts as $post)
+                    <ul class="list-group ">
+                        @foreach ($posts as $post)
 
-                                <li class="list-date-event-100 list-date-news-top">
-                                    <div class="row">
-                                      <div class="fw-bold col-md-6 padding-list-group"><span><br>{{ $post['title'] }}</div>
+                            <li class="list-date-event-100 list-date-news-top">
+                                <div class="row">
+                                    <div class="fw-bold col-md-6 padding-list-group"><span><br>{{ $post['title'] }}</div>
 
-                                      <!--icon panah merah-->
-                                      <div class="col-md-6 text-end padding-list-group"><a href="/news/{{ $post['slug'] }}"><i class="fa fa-play icon-panah-merah"></i></a></div>
-                                    </div>
-                                  </li>
+                                    <!--icon panah merah-->
+                                    <div class="col-md-6 text-end padding-list-group"><a
+                                            href="/news/{{ $post['slug'] }}"><i
+                                                class="fa fa-play icon-panah-merah"></i></a></div>
+                                </div>
+                            </li>
 
-                            @endforeach
+                        @endforeach
+                        <div class="d-flex justify-content-end">
+                            <h4 class="text-white m-1 mt-3"> <a href="/news" class="text-white">See more news</a> </h1>
+                        </div>
 
-                        </ul>
+                    </ul>
 
                 </div>
 
