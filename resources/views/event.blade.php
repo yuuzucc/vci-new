@@ -8,8 +8,8 @@
                 <h1 class="card-title text-center m-4">{{ $post->title }}</h1>
 
                 {!! $post->description !!}
-                <a href="#" class="btn btn-danger">Register</a>
-                <p class="card-text">
+                <a href="#" class="btn btn-danger ms-3">Register</a>
+                <p class="card-text mt-3">
                     <small class="text-muted">{{ $post['created_at'] }}</small>
                 </p>
 

@@ -33,4 +33,4 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/player', [PostController::class, 'player'])->middleware('auth');
 
 Route::get('/events', [PostController::class, 'events']);
-//Route::get('/events/{slug}', [PostController::class, 'showE']);
+Route::get('/events/{slug}', [PostController::class, 'showE']);

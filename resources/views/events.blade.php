@@ -39,7 +39,7 @@
                             <tr>
 
                                 <th scope="row">{{ $loop->iteration }}</th>
-                                <td>{{ $post['title'] }}</td>
+                                <td><a href="/events/{{ $post['slug'] }}">{{ $post['title'] }}</a> </td>
                                 <td>{{ $post['date'] }}</td>
 
                             </tr>
