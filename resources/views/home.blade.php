@@ -18,12 +18,12 @@
                         <div class="card-body">
                             <!-- search-->
                             <h3>Search for event</h3>
-                            <div class="input-group mb-3">
+                            <form action="/events" class="input-group mb-3">
                                 <input type="search" class="form-control rounded me-3" placeholder="Search"
-                                    aria-label="Search" aria-describedby="search-addon" />
-                                <button type="button" class="btn text-white rounded"
+                                    aria-label="Search" name="search" aria-describedby="search-addon" />
+                                <button type="submit" class="btn text-white rounded"
                                     style="background-color: red;">search</button>
-                            </div>
+                            </form>
                             <ul class="list-group">
                                 @foreach ($posts as $post)
                                     @if ($post->category->id == 1)

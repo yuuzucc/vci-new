@@ -14,12 +14,6 @@ class PostController extends Controller
         ]);
     }
 
-    public function indexe(){
-        return view('home',[
-            "title" => "Posts",
-            "posts" => Post::latest()->paginate(4)
-        ]);
-    }
 
     public function show($slug)
     {
