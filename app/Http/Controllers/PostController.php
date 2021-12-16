@@ -37,13 +37,7 @@ class PostController extends Controller
         ]);
     }
 
-    public function player()
-    {
-        return view('player', [
-            "title" => "Players Event Log",
-            "posts" => Post::latest()->get()
-        ]);
-    }
+
 
     public function events()
     {
