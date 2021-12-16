@@ -16,7 +16,9 @@
                     <form action="/player" method="POST">
                         @csrf
                         <input type="hidden" name="event_id" value="{{ $post->id }}">
-                        <button type="submit" class="btn btn-danger mt-4">Register</button>
+                        <button type="submit" class="btn btn-danger mt-4" @if (Auth::user()->events->contains('id', $post->id))
+                            disabled
+                        @endif>Register</button>
                     </form>
 
                     <p class="card-text mt-4">

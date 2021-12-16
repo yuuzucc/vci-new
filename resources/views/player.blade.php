@@ -33,26 +33,39 @@
                         <th scope="col">No</th>
                         <th scope="col">Event Name</th>
                         <th scope="col">Date</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Format</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($events as $event)
+                    @if (!$events->count())
                         <tr>
-                            <th scope="row">{{ $loop->iteration }}</th>
-                            <td>{{ $event->title }}</td>
-                            <td>{{ $event->date }}</td>
-                            <td>
-                                <form action="/player" method="post">
-                                    @method('DELETE')
-                                    @csrf
-                                    <input type="hidden" name="event_id" value="{{ $event->id}}" />
-                                    <button type="submit" class="btn btn-danger mt-4">Delete</button>
-                                </form>
+                            <td colspan="6">
+                                <div  class="w-100 d-flex justify-content-center">
+                                    <span>No event registered</span>
+                                </div>
                             </td>
                         </tr>
-                    @endforeach
-
+                    @else
+                        @foreach ($events as $event)
+                            <tr>
+                                <th scope="row">{{ $loop->iteration }}</th>
+                                <td>{{ $event->title }}</td>
+                                <td>{{ $event->date }}</td>
+                                <td>{{ $event->time }}</td>
+                                <td>{{ $event->format }}</td>
+                                <td>
+                                    <form action="/player" method="post">
+                                        @method('DELETE')
+                                        @csrf
+                                        <input type="hidden" name="event_id" value="{{ $event->id}}" />
+                                        <button type="submit" class="btn btn-danger mt-4">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach
+                    @endif
                 </tbody>
             </table>
         </div>
