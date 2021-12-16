@@ -4,6 +4,12 @@
 @section('container')
 
     <body style="background: #141313; font-family: 'Noto Sans', sans-serif;">
+        @if (session()->has('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
         <div class="col-11 mx-auto mt-4 card-body rounded-3 text-white mb-3" style="background-color: red;">
             <h3 class="card-title ms-3">Player Events Log</h3>
         </div>
@@ -31,7 +37,6 @@
                     </tr>
                 </thead>
                 <tbody>
-
                     @foreach ($events as $event)
                         <tr>
                             <th scope="row">{{ $loop->iteration }}</th>

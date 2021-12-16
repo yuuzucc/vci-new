@@ -31,7 +31,7 @@ class UserController extends Controller
 
         $user->events()->attach($eventId);
 
-        return redirect('/player');
+        return redirect('/player')->with('success', 'Anda berhasil mendaftar');
     }
 
     public function deleteEvent(Request $request) {
